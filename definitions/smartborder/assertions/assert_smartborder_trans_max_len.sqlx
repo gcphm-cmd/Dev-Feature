@@ -1,0 +1,7 @@
+config {
+  type: "assertion"
+}
+
+SELECT * FROM 
+${ref("stg_smartborder_trans")} 
+WHERE LENGTH(CAST(sb_num AS STRING)) > 9
